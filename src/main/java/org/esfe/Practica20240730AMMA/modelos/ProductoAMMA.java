@@ -1,10 +1,10 @@
-package org.esfe.modelos;
+package org.esfe.Practica20240730AMMA.modelos;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 
 
 
@@ -27,7 +27,8 @@ public class ProductoAMMA {
     private BigDecimal precioAMMA;
 
     @NotNull(message = "La fecha de vencimiento es requerida")
-    private Date fechaVencimiento;
+    private LocalDate fechaVencimiento;
+
 
     @NotNull(message = "El estatus es requerido")
     private Byte estatusAMMA;
@@ -68,11 +69,11 @@ public class ProductoAMMA {
         this.precioAMMA = precioAMMA;
     }
 
-    public Date getFechaVencimiento() {
+    public LocalDate getFechaVencimiento() {
         return fechaVencimiento;
     }
 
-    public void setFechaVencimiento(Date fechaVencimiento) {
+    public void setFechaVencimiento(LocalDate fechaVencimiento) {
         this.fechaVencimiento = fechaVencimiento;
     }
 

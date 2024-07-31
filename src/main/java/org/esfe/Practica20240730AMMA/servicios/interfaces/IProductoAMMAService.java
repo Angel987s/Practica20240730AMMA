@@ -1,6 +1,6 @@
-package org.esfe.servicios.interfaces;
+package org.esfe.Practica20240730AMMA.servicios.interfaces;
 
-import org.esfe.modelos.ProductoAMMA;
+import org.esfe.Practica20240730AMMA.modelos.ProductoAMMA;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -12,9 +12,9 @@ public interface IProductoAMMAService {
 
     List<ProductoAMMA> obtenerTodos();
 
-    Optional<ProductoAMMA> buscarPorId(Integer id);
+    Optional<ProductoAMMA> buscarPorId(Long id);
 
     ProductoAMMA crearOEditar(ProductoAMMA productoAMMA);
 
-    void eliminarPorId(Integer id);
+    void eliminarPorId(Long id);
 }
